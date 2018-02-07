@@ -11,7 +11,7 @@
     <script type="text/paperscript" canvas="myCanvas">
 
     var text = new PointText(view.center);
-    text.content = 'Press any key :)';
+    text.content = 'Press any letter key :)';
     text.style = {
         fontFamily: 'Arial',
         fontSize: 20,
@@ -180,7 +180,7 @@
     }
 
     var circles = [];
-    
+
     function onKeyDown(event){
         // check if keyData exists
         if(keyData[event.key]){
@@ -198,7 +198,7 @@
             keyData[event.key].sound.play();
             // push into circles array for animation looping
             circles.push(newCircle);
-        }   
+        }
     }
 
     function onFrame(event){
@@ -214,14 +214,14 @@
                 circles.splice(i, 1);
                 // decrement i so that loop doesn't skip circle because of splice
                 i--;
-            }   
+            }
         }
     }
 
     </script>
 </head>
 <body>
-    
+
     <canvas id="myCanvas" resize></canvas>
 
 </body>
